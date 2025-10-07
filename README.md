@@ -1,0 +1,2 @@
+# Jesse_Kleinschmit_ui_garden
+Simulate interactions with web applications to ensure the application functions as per user test cases Validate code against user test cases to ensure code meets user specifications Evaluate various build tools and processes to assist with code optimization and deployment Generate an optimized web app to illustrate the ability to create, test, and deploy an application.
