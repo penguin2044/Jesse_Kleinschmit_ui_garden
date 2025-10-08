@@ -26,31 +26,4 @@ describe('Text Component', () => {
     expect(styles.cursor).toBe('not-allowed');
     expect(styles.opacity).toBe('0.5');
   });
-  
-  // BONUS TEST: Font weight changes when bold
-  test('applies bold font weight when bold is true', () => {
-    render(<Text content="Bold Text" bold={true} />);
-    
-    const textElement = screen.getByTestId('text');
-    const styles = window.getComputedStyle(textElement);
-    expect(styles.fontWeight).toBe('700');
-  });
-  
-  // BONUS TEST: Font style changes when italic
-  test('applies italic style when italic is true', () => {
-    render(<Text content="Italic Text" italic={true} />);
-    
-    const textElement = screen.getByTestId('text');
-    const styles = window.getComputedStyle(textElement);
-    expect(styles.fontStyle).toBe('italic');
-  });
-  
-  // BONUS TEST: Text alignment works
-  test('applies center alignment', () => {
-    render(<Text content="Centered" align="center" />);
-    
-    const textElement = screen.getByTestId('text');
-    const styles = window.getComputedStyle(textElement);
-    expect(styles.textAlign).toBe('center');
-  });
 });

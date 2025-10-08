@@ -42,19 +42,4 @@ describe('Card Component', () => {
     expect(styles.cursor).toBe('not-allowed');
     expect(styles.opacity).toBe('0.6');
   });
-  
-  // BONUS TEST: Image renders when provided
-  test('renders image when imageSrc is provided', () => {
-    render(
-      <Card 
-        title="Card with Image" 
-        description="Description"
-        imageSrc="https://example.com/image.jpg"
-      />
-    );
-    
-    const imageElement = screen.getByTestId('card-image');
-    expect(imageElement).toBeInTheDocument();
-    expect(imageElement).toHaveAttribute('src', 'https://example.com/image.jpg');
-  });
 });

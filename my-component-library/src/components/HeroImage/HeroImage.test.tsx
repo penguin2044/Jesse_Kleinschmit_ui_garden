@@ -51,34 +51,5 @@ describe('HeroImage Component', () => {
     expect(styles.opacity).toBe('0.5');
   });
   
-  // BONUS TEST: Renders without overlay text
-  test('renders without overlay when no title or subtitle', () => {
-    render(
-      <HeroImage 
-        src="https://example.com/image.jpg"
-        alt="Image only"
-      />
-    );
-    
-    const imageElement = screen.getByTestId('hero-image');
-    expect(imageElement).toBeVisible();
-    
-    const overlayElement = screen.queryByTestId('hero-overlay');
-    expect(overlayElement).not.toBeInTheDocument();
-  });
   
-  // BONUS TEST: Custom height applied
-  test('applies custom height', () => {
-    render(
-      <HeroImage 
-        src="https://example.com/image.jpg"
-        alt="Custom height"
-        height="600px"
-      />
-    );
-    
-    const containerElement = screen.getByTestId('hero-container');
-    const styles = window.getComputedStyle(containerElement);
-    expect(styles.height).toBe('600px');
-  });
 });

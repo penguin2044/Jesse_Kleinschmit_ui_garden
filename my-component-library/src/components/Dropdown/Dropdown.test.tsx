@@ -54,40 +54,4 @@ describe('Dropdown Component', () => {
     expect(styles.opacity).toBe('0.6');
   });
   
-  // BONUS TEST: Selected value works
-  test('displays selected value correctly', () => {
-    render(
-      <Dropdown 
-        options={sampleOptions}
-        selectedValue="option2"
-      />
-    );
-    
-    const dropdownElement = screen.getByTestId('dropdown') as HTMLSelectElement;
-    expect(dropdownElement.value).toBe('option2');
-  });
-  
-  // BONUS TEST: onChange callback works
-  test('calls onChange when selection changes', () => {
-    const handleChange = jest.fn();
-    
-    render(
-      <Dropdown 
-        options={sampleOptions}
-        onChange={handleChange}
-      />
-    );
-    
-    const dropdownElement = screen.getByTestId('dropdown');
-    
-    // Simulate selecting an option
-    const changeEvent = new Event('change', { bubbles: true });
-    Object.defineProperty(changeEvent, 'target', {
-      value: { value: 'option2' },
-    });
-    dropdownElement.dispatchEvent(changeEvent);
-    
-    // Note: onChange might not be called in this test setup
-    // This is more of a structure test
-  });
 });

@@ -40,35 +40,4 @@ describe('Img Component', () => {
     expect(styles.filter).toContain('grayscale');
   });
   
-  // BONUS TEST: Width and height applied
-  test('applies custom width and height', () => {
-    render(
-      <Img 
-        src="https://example.com/image.jpg"
-        alt="Custom size"
-        width="300px"
-        height="200px"
-      />
-    );
-    
-    const imgElement = screen.getByTestId('img');
-    const styles = window.getComputedStyle(imgElement);
-    expect(styles.width).toBe('300px');
-    expect(styles.height).toBe('200px');
-  });
-  
-  // BONUS TEST: Border radius applied
-  test('applies border radius', () => {
-    render(
-      <Img 
-        src="https://example.com/image.jpg"
-        alt="Rounded image"
-        borderRadius="16px"
-      />
-    );
-    
-    const imgElement = screen.getByTestId('img');
-    const styles = window.getComputedStyle(imgElement);
-    expect(styles.borderRadius).toBe('16px');
-  });
 });

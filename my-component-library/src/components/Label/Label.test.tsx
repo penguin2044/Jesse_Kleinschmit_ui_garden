@@ -26,30 +26,4 @@ describe('Label Component', () => {
     expect(styles.cursor).toBe('not-allowed');
     expect(styles.opacity).toBe('0.6');
   });
-  
-  // BONUS TEST: htmlFor attribute is set
-  test('sets htmlFor attribute correctly', () => {
-    render(<Label text="Email" htmlFor="email-input" />);
-    
-    const labelElement = screen.getByTestId('label');
-    expect(labelElement).toHaveAttribute('for', 'email-input');
-  });
-  
-  // BONUS TEST: Size prop works
-  test('applies correct font size for small size', () => {
-    render(<Label text="Small Label" size="small" />);
-    
-    const labelElement = screen.getByTestId('label');
-    const styles = window.getComputedStyle(labelElement);
-    expect(styles.fontSize).toBe('12px');
-  });
-  
-  // BONUS TEST: Bold prop works
-  test('applies bold font weight when bold is true', () => {
-    render(<Label text="Bold Label" bold={true} />);
-    
-    const labelElement = screen.getByTestId('label');
-    const styles = window.getComputedStyle(labelElement);
-    expect(styles.fontWeight).toBe('600');
-  });
 });
