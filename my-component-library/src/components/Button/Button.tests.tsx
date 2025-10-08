@@ -5,7 +5,7 @@ import { Button } from './Button';
 
 describe('Button Component', () => {
   
-  // TEST 1: Component is visible (REQUIRED!)
+  // TEST 1: Component is visible
   test('renders button and is visible', () => {
     render(<Button label="Test Button" />);
     const buttonElement = screen.getByTestId('button');
@@ -14,7 +14,7 @@ describe('Button Component', () => {
     expect(buttonElement).toHaveTextContent('Test Button');
   });
 
-  // TEST 2: Background color changes when disabled (REQUIRED!)
+  // TEST 2: Background color changes when disabled 
   test('changes style when disabled', () => {
     render(<Button label="Disabled" disabled={true} />);
     const buttonElement = screen.getByTestId('button');
